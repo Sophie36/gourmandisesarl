@@ -1,8 +1,18 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+switch($gestion){
+    case 'produit':
+        require_once ($gestion.'controleur.php');
+        break;
+    default :
+        echo "Impossible !!!";
+}
+    if(isset($_POST['ajouter'])){
+        ajouter();
+    }elseif(isset($_POST['valider'])){
+        valider();
+    }elseif(isset($_POST['consulter'])){
+        consulter();
+    }else{
+        liste();
+    }
+?>          

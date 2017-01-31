@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-01-31 15:38:24
+/* Smarty version 3.1.29, created on 2017-01-31 15:56:52
   from "C:\Wamp64\www\gourmandisesarl\template\produitVueListe.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5890af707874f9_21351424',
+  'unifunc' => 'content_5890b3c440ea66_61423431',
   'file_dependency' => 
   array (
     'be9120db817658a7c7419871b1d28ea846aff03a' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandisesarl\\template\\produitVueListe.tpl',
-      1 => 1485876827,
+      1 => 1485878208,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5890af707874f9_21351424 ($_smarty_tpl) {
+function content_5890b3c440ea66_61423431 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
     <html>
@@ -49,10 +49,18 @@ $__foreach_Produit_0_saved_local_item = $_smarty_tpl->tpl_vars['Produit'];
                 <tr>
                     <td><?php echo $_smarty_tpl->tpl_vars['Produit']->value['reference'];?>
 </td>
+                    <td>
+                        <form method="post" action="produitVueListe.php">
+                        <input type="hidden" name="identifiant" value="$Produit.reference">
+                        <input type="submit" value="C" />
+                        </form>
+                    </td>    
                     <td><?php echo $_smarty_tpl->tpl_vars['Produit']->value['designation'];?>
 </td>
+                    
                     <td><?php echo $_smarty_tpl->tpl_vars['Produit']->value['prix'];?>
 </td>
+                        
                 </tr>
                 <?php
 $_smarty_tpl->tpl_vars['Produit'] = $__foreach_Produit_0_saved_local_item;

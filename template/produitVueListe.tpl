@@ -13,8 +13,16 @@
                 {foreach from=$listeProduits item=Produit}
                 <tr>
                     <td>{$Produit.reference}</td>
+                    <td>
+                        <form method="post" action="produitVueListeConsult.php">
+                        <input type="hidden" name="identifiant" value="$Produit.reference">
+                        <input type="submit" value="C" />
+                        </form>
+                    </td>    
                     <td>{$Produit.designation}</td>
+                    
                     <td>{$Produit.prix}</td>
+                        
                 </tr>
                 {/foreach}
             </table>

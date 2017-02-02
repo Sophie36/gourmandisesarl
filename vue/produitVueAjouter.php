@@ -34,6 +34,12 @@
          case 'consulter' :
             $tpl->assign("msg","consulter un produit");
             break;
+        case 'validerajouter' :
+             $tpl->assign("msg","ajout d'un produit");
+            $tpl->assign("G","Gramme");
+            $tpl->assign("P","Poids Piece");
+            $tpl->assign("valeur",0);
+            break;
     }
     $tpl->display("template/produitVueAjouter.tpl");
 

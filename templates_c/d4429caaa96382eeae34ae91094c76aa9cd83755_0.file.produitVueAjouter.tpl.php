@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-02 14:59:42
+/* Smarty version 3.1.29, created on 2017-02-02 15:47:49
   from "C:\Wamp64\www\gourmandisesarl\template\produitVueAjouter.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5893495ec5ba45_90412883',
+  'unifunc' => 'content_589354a562bbd3_43785403',
   'file_dependency' => 
   array (
     'd4429caaa96382eeae34ae91094c76aa9cd83755' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandisesarl\\template\\produitVueAjouter.tpl',
-      1 => 1486047570,
+      1 => 1486050449,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5893495ec5ba45_90412883 ($_smarty_tpl) {
+function content_589354a562bbd3_43785403 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
     <html>
@@ -50,7 +50,7 @@ function content_5893495ec5ba45_90412883 ($_smarty_tpl) {
                 Poids pièce : <input type="text" name="poids_piece" placeholder="Ex : 500" size="40" maxlength="10"></br>
                 </br>
                 <input type="submit" name="retour" value="Retour">
-                <input type="submit" name="valider" value="Valider">
+                <input type="submit" name="validerajouter" value="Valider">
             </form>
         </body>
     </html><?php }

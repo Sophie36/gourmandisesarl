@@ -24,7 +24,7 @@
                 Poids pièce : <input type="text" name="poids_piece" placeholder="Ex : 500" size="40" maxlength="10"></br>
                 </br>
                 <input type="submit" name="retour" value="Retour">
-                <input type="submit" name="valider" value="Valider">
+                <input type="submit" name="validerajouter" value="Valider">
             </form>
         </body>
     </html>

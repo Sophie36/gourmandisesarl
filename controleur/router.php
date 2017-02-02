@@ -8,6 +8,8 @@ switch($gestion){
 }
     if(isset($_POST['ajouter'])){
         ajouter($_POST);
+    }elseif(isset($_POST['validerajouter'])){
+        validerajouter($_POST);
     }elseif(isset($_POST['valider'])){
         valider();
     }elseif(isset($_POST['consulter'])){

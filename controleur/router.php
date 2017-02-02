@@ -7,7 +7,7 @@ switch($gestion){
         echo "Impossible !!!";
 }
     if(isset($_POST['ajouter'])){
-        ajouter();
+        ajouter($_POST);
     }elseif(isset($_POST['valider'])){
         valider();
     }elseif(isset($_POST['consulter'])){

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-02 14:13:34
+/* Smarty version 3.1.29, created on 2017-02-02 14:59:42
   from "C:\Wamp64\www\gourmandisesarl\template\produitVueAjouter.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58933e8eb70ad4_02183065',
+  'unifunc' => 'content_5893495ec5ba45_90412883',
   'file_dependency' => 
   array (
     'd4429caaa96382eeae34ae91094c76aa9cd83755' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandisesarl\\template\\produitVueAjouter.tpl',
-      1 => 1486044461,
+      1 => 1486047570,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58933e8eb70ad4_02183065 ($_smarty_tpl) {
+function content_5893495ec5ba45_90412883 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
     <html>
@@ -32,13 +32,15 @@ function content_58933e8eb70ad4_02183065 ($_smarty_tpl) {
             <form method="POST" action="index.php">
                 <input type="hidden" name="gestion" value="produit">
                 <input type="hidden" name="action" value="valideajout">
-                Désignation : <input type="text" name="designation" placeholder="Ex : designation" value="" size="40" maxlength="10" required="required"></br>
+                Désignation : <input type="text" name="designation" placeholder="Ex : désignation" value="" size="40" maxlength="10" required="required"></br>
                 </br>
                 Prix unitaire : <input type="text" name="prix_unitaire_HT" placeholder="Ex : 0.00" size="40" maxlength="10"></br>
                 </br>
                 Descriptif : <select name="descriptif" id="descriptif"></br>
-                    <option value="G">Gramme</option>
-                    <option value="P">Poids piece</option>
+                    <option value="G"><?php echo $_smarty_tpl->tpl_vars['G']->value;?>
+</option>
+                    <option value="P"><?php echo $_smarty_tpl->tpl_vars['P']->value;?>
+</option>
                 </select></br>
                 </br>
                 Stock : <input type="text" name="stock" placeholder="Ex : 15" size="40" maxlength="10"></br>

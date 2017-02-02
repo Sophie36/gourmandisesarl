@@ -28,6 +28,8 @@
     switch ($action){
         case 'ajouter' :
             $tpl->assign("msg","ajout d'un produit");
+            $tpl->assign("G","Gramme");
+            $tpl->assign("P","Poids Piece");
             break;
          case 'consulter' :
             $tpl->assign("msg","consulter un produit");

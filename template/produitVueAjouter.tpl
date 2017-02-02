@@ -13,8 +13,8 @@
                 Prix unitaire : <input type="text" name="prix_unitaire_HT" placeholder="Ex : 0.00" size="40" maxlength="10"></br>
                 </br>
                 Descriptif : <select name="descriptif" id="descriptif"></br>
-                    <option value="G">Gramme</option>
-                    <option value="P">Poids piece</option>
+                    <option value="G">{$G}</option>
+                    <option value="P">{$P}</option>
                 </select></br>
                 </br>
                 Stock : <input type="text" name="stock" placeholder="Ex : 15" size="40" maxlength="10"></br>

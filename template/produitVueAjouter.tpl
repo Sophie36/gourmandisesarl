@@ -5,6 +5,7 @@
         </head>
         <body>
             <h2>{$msg}</h2>
+           
             <form method="POST" action="index.php">
                 <input type="hidden" name="gestion" value="produit">
                 <input type="hidden" name="action" value="valideajout">
@@ -26,5 +27,6 @@
                 <input type="submit" name="retour" value="Retour">
                 <input type="submit" name="validerajouter" value="Valider">
             </form>
+
         </body>
     </html>

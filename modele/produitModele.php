@@ -12,6 +12,13 @@
         $idRequete=executeRequete($cnx,$sql,$designation,$descriptif,$stock,$quantite,$poids_piece);
         return $idRequete;
     } 
+    function consultProduits($param){
+        $reference=$param['identifiant'];
+        $cnx=getBD();
+        $sql='SELECT * FROM produit WHERE reference=?';
+        $idRequete=executeRequete($cnx,$sql,array($reference));
+        return $idRequete;
+    }
     function listeProduits(){
         $cnx=getBD();
         $sql='SELECT * FROM produit';

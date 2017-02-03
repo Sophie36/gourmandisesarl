@@ -14,5 +14,9 @@ function liste(){
     $idRequete=listeProduits();
     require_once 'vue/produitVueListe.php';    
 }
-
+function consulter($param){
+    $action=$param['action'];
+    $idRequete=consultProduits($param);
+    require_once 'vue/produitVueAjouter.php';  
+}
 ?>

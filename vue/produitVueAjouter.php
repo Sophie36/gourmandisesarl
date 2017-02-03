@@ -42,9 +42,3 @@
             break;
     }
     $tpl->display("template/produitVueAjouter.tpl");
-
-
-           
-  
-            
-            

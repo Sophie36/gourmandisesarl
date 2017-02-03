@@ -13,7 +13,7 @@ switch($gestion){
     }elseif(isset($_POST['valider'])){
         valider();
     }elseif(isset($_POST['consulter'])){
-        consulter();
+        consulter($_POST);
     }else{
         liste();
     }

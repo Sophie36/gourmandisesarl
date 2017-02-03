@@ -20,7 +20,9 @@
                     <td>
                         <form method="post" action="index.php">
                         <input type="hidden" name="identifiant" value="$Produit.reference">
-                        <input type="submit" value="C" />
+                        <input type="hidden" name="gestion" value="Produit">
+                        <input type="hidden" name="action" value="Consulter">
+                        <input type="submit" name="consulter" value="C" />
                         </form>
                     </td>      
                 </tr>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-02 15:47:49
+/* Smarty version 3.1.29, created on 2017-02-03 11:05:06
   from "C:\Wamp64\www\gourmandisesarl\template\produitVueAjouter.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589354a562bbd3_43785403',
+  'unifunc' => 'content_589463e2d551d3_45752012',
   'file_dependency' => 
   array (
     'd4429caaa96382eeae34ae91094c76aa9cd83755' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandisesarl\\template\\produitVueAjouter.tpl',
-      1 => 1486050449,
+      1 => 1486119895,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589354a562bbd3_43785403 ($_smarty_tpl) {
+function content_589463e2d551d3_45752012 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
     <html>
@@ -29,6 +29,7 @@ function content_589354a562bbd3_43785403 ($_smarty_tpl) {
         <body>
             <h2><?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
 </h2>
+           
             <form method="POST" action="index.php">
                 <input type="hidden" name="gestion" value="produit">
                 <input type="hidden" name="action" value="valideajout">
@@ -52,6 +53,7 @@ function content_589354a562bbd3_43785403 ($_smarty_tpl) {
                 <input type="submit" name="retour" value="Retour">
                 <input type="submit" name="validerajouter" value="Valider">
             </form>
+
         </body>
     </html><?php }
 }

@@ -11,8 +11,8 @@ function executeRequete($cnx, $sql, $parametre=NULL){
     return $idRequete; 
 }
 function getBD(){
-        $cnx=connexion(UTILISATEUR,MOTDEPASSE,SERVER,BASEDEDONNEES);
-        return $cnx;
+    $cnx=  connexion(UTILISATEUR, MOTDEPASSE, SERVER, BASEDEDONNEES);
+    return $cnx;
 }
 function connexion($UTILISATEUR, $MOTDEPASSE, $SERVER, $BASEDEDONNEES){
     try {

@@ -1,44 +1,74 @@
 <?php
-    require_once 'include/libs/Smarty.class.php';
-    $tpl=new Smarty();
-  
-    /*$ajouterProduits=array();
+require_once 'include/libs/Smarty.class.php';
+$tpl=new Smarty();
+switch ($action){
+case 'ajouter' :
+    $tpl->assign("msg","Ajout d'un produit");
+    $tpl->assign("G", "Gramme");
+    $tpl->assign("P", "Poids piece");
+    $tpl->assign("valeur", 0);
+    $tpl->display("template/produitVueAjouter.tpl");
+    break;
+/*case 'validerajouter':
+    $tpl->assign("msg","Ajout d'un produit");
+    $tpl->assign("G", "Gramme");
+    $tpl->assign("P", "Poids piece");
+    $tpl->assign("valeur", 0);
+    break;*/
+case 'consulter' :
+    $consultProduits=array();
     $i=0;
     while($row=$idRequete->fetch()){
-        $ajouterProduits[$i]['designation']=$row['designation'];
-        $ajouterProduits[$i]['prix']=$row['prix_unitaire_HT'];
-        $ajouterProduits[$i]['descriptif']=$row['descriptif'];
-        $ajouterProduits[$i]['stock']=$row['stock'];
-        $ajouterProduits[$i]['quantite']=$row['quantite'];
-        $ajouterProduits[$i]['poids_piece']=$row['poids_piece'];
-        $i++;
+    $consultProduits[$i]['designation']=$row['designation'];
+    $consultProduits[$i]['prixunitaireht']=$row['prix_unitaire_HT'];
+    $consultProduits[$i]['descriptif']=$row['descriptif'];
+    $consultProduits[$i]['stock']=$row['stock'];
+    $consultProduits[$i]['quantite']=$row['quantite'];
+    $consultProduits[$i]['poidspiece']=$row['poids_piece'];
+    $i++;
     }
-    if (isset($_POST['designation']) && isset($_POST['prix_unitaire_HT'])&& isset($_POST['descriptif'])&& isset($_POST['stock'])&& isset($_POST['quantite'])&& isset($_POST['poids_piece'])) {
-                $designation=$_POST["designation"];
-                $prix_unitaire_HT=$_POST["prix_unitaire_HT"];
-                $descriptif=$_POST["descriptif"];
-                $stock=$_POST["stock"];
-                $quantite=$_POST["quantite"];
-                $poids_piece=$_POST["poids_piece"];   
-            }
-    $nblig=$idRequete->rowCount();
-    $tpl->assign('msg','Ajouter des Produits');
-    $tpl->assign('nblig',$nblig);
-    $tpl->assign('ajouterProduits',$ajouterProduits);*/
-    switch ($action){
-        case 'ajouter' :
-            $tpl->assign("msg","ajout d'un produit");
-            $tpl->assign("G","Gramme");
-            $tpl->assign("P","Poids Piece");
-            break;
-         case 'consulter' :
-            $tpl->assign("msg","consulter un produit");
-            break;
-        case 'validerajouter' :
-             $tpl->assign("msg","ajout d'un produit");
-            $tpl->assign("G","Gramme");
-            $tpl->assign("P","Poids Piece");
-            $tpl->assign("valeur",0);
-            break;
+    $tpl->assign("msg","Consultation d'un produit");
+    $tpl->assign("G", "Gramme");
+    $tpl->assign("P", "Poids piece");
+    $tpl->assign('consultProduits', $consultProduits);
+    $tpl->display("template/produitVueConsult.tpl");
+    break;
+case 'modifier' :
+    $modifProduits=array();
+    $i=0;
+    while($row=$idRequete->fetch()){
+    $modifProduits[$i]['reference']=$row['reference'];    
+    $modifProduits[$i]['designation']=$row['designation'];
+    $modifProduits[$i]['prixunitaireht']=$row['prix_unitaire_HT'];
+    $modifProduits[$i]['descriptif']=$row['descriptif'];
+    $modifProduits[$i]['stock']=$row['stock'];
+    $modifProduits[$i]['quantite']=$row['quantite'];
+    $modifProduits[$i]['poidspiece']=$row['poids_piece'];
+    $i++;
     }
-    $tpl->display("template/produitVueAjouter.tpl");
+    $tpl->assign("msg","Modification d'un produit");
+    $tpl->assign("G", "Gramme");
+    $tpl->assign("P", "Poids piece");
+    $tpl->assign('modifProduits', $modifProduits);
+    $tpl->display("template/produitVueModif.tpl");
+    break;
+case 'supprimer' :
+    $supprimeProduits=array();
+    $i=0;
+    while($row=$idRequete->fetch()){
+    $supprimeProduits[$i]['reference']=$row['reference'];    
+    $supprimeProduits[$i]['designation']=$row['designation'];
+    $supprimeProduits[$i]['prixunitaireht']=$row['prix_unitaire_HT'];
+    $supprimeProduits[$i]['descriptif']=$row['descriptif'];
+    $supprimeProduits[$i]['stock']=$row['stock'];
+    $supprimeProduits[$i]['quantite']=$row['quantite'];
+    $supprimeProduits[$i]['poidspiece']=$row['poids_piece'];
+    $i++;
+    }
+    $tpl->assign("msg","Suppression d'un produit");
+    $tpl->assign("G", "Gramme");
+    $tpl->assign("P", "Poids piece");
+    $tpl->assign('supprimeProduits', $supprimeProduits);
+    $tpl->display("template/produitVueSupprimer.tpl");
+    break;
+}

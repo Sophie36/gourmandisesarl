@@ -1,12 +1,12 @@
 <?php
 switch ($gestion){
-case 'produit':
+case 'Accueil':
     require_once($gestion.'Controleur.php');
     break;
 default :
     echo "impossible !!!";
 }
-if(isset($_POST['ajouter'])){
+/*if(isset($_POST['ajouter'])){
     ajouter($_POST);
 }elseif(isset($_POST['validerajouter'])){
     validerajouter($_POST);
@@ -26,5 +26,16 @@ if(isset($_POST['ajouter'])){
     validersupprimer($_POST);
 }else {
 liste();    
+}*/
+if(isset($_POST['gestion'])){
+    gestion();
+}elseif(isset($_POST['articles'])){
+    articles();
+}elseif(isset($_POST['clients'])){
+    clients();
+}elseif(isset($_POST['vendeur'])){
+    vendeur();
+}else {
+    liste(); 
 }
 ?>

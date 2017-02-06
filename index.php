@@ -3,7 +3,7 @@
         if(isset($_REQUEST['gestion'])){
             $gestion=$_REQUEST['gestion'];
         } else {
-            $gestion='produit';
+            $gestion='Accueil';
         }
         require_once 'controleur/router.php';
 

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-06 13:23:05
+/* Smarty version 3.1.29, created on 2017-02-10 14:20:14
   from "C:\Wamp64\www\gourmandisesarl\template\produitVueListe.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589878b921a176_61726459',
+  'unifunc' => 'content_589dcc1e9ee732_97424860',
   'file_dependency' => 
   array (
     'be9120db817658a7c7419871b1d28ea846aff03a' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandisesarl\\template\\produitVueListe.tpl',
-      1 => 1486387376,
+      1 => 1486736177,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589878b921a176_61726459 ($_smarty_tpl) {
+function content_589dcc1e9ee732_97424860 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,27 @@ function content_589878b921a176_61726459 ($_smarty_tpl) {
     <body>
         <h2><?php echo mb_strtoupper($_smarty_tpl->tpl_vars['msg']->value, 'UTF-8');?>
 </h2>
-        <br>
+        </br>
+                    <form method="post" action="index.php">
+                            <input type="hidden" name="gestion" value="produit">
+                            <input type="submit" name="produit" value="Articles">
+                    </form>
+
+                    <form method="post" action="index.php">
+                            <input type="hidden" name="gestion" value="client">
+                            <input type="submit" name="clients" value="Clients">
+                    </form> 
+
+                    <form method="post" action="index.php">        
+                            <input type="hidden" name="gestion" value="vendeur">
+                            <input type="submit" name="vendeur" value="Vendeurs">
+                    </form>
+                    <form method="post" action="index.php">        
+                            <input type="hidden" name="gestion" value="Accueil">
+                            <input type="submit" name="Accueil" value="Retour">
+                    </form>
+        
+        </br>
         <table>
             <tr>
                 <th>reference</th>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-06 10:50:14
+/* Smarty version 3.1.29, created on 2017-02-10 14:02:39
   from "C:\Wamp64\www\gourmandisesarl\template\produitVueConsult.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_589854e6816d40_54145557',
+  'unifunc' => 'content_589dc7ff4c08d2_05737867',
   'file_dependency' => 
   array (
     'ebeeb2f7f817c238312eaec72f54aa2581db29b4' => 
     array (
       0 => 'C:\\Wamp64\\www\\gourmandisesarl\\template\\produitVueConsult.tpl',
-      1 => 1486137061,
+      1 => 1486386176,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_589854e6816d40_54145557 ($_smarty_tpl) {
+function content_589dc7ff4c08d2_05737867 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,6 +62,7 @@ $__foreach_Produit_0_saved_local_item = $_smarty_tpl->tpl_vars['Produit'];
 "><br>
                 Poids Piece: <input type="text" name="poidspiece" value="<?php echo $_smarty_tpl->tpl_vars['Produit']->value['poidspiece'];?>
 "><br>
+                <input type="submit" name="retour" value="Retour">
                 <input type="submit" name="valider" value="Valider" />
         </form> 
         <?php

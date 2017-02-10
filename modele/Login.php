@@ -6,20 +6,20 @@ class Login {
     private $motpasse;
     private $CXN; //database object
     
-    function __construct($username, $password)
+    function __construct($login, $motpasse)
     {
         //set data
-        $this->setData($username, $password);
+        $this->setData($login, $motpasse);
         //connect db
         $this->connectToDb();
         //get data        
         
     }
     
-    private function setData($username,$password)
+    private function setData($login,$motpasse)
     {
-        $this->login = $username;
-        $this->motpasse = $password;
+        $this->login = $login;
+        $this->motpasse = $motpasse;
     }
     
     private function connectToDb()
@@ -41,7 +41,7 @@ class Login {
         }
         else
         {
-            throw new Exception('username or password wrong');
+            throw new Exception('login ou motpassse wrong');
         }
     }
     

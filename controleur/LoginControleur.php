@@ -8,4 +8,3 @@ function connexion() {
     $idRequete=authentification();
     require_once 'vue/LoginVue.php';
 }
-

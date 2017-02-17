@@ -1,6 +1,6 @@
 <?php
 switch ($gestion){
-case 'Accueil':
+case 'accueil':
     require_once($gestion.'Controleur.php');
     break;
 case 'produit':

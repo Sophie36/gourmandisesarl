@@ -1,16 +1,5 @@
 <?php
-require_once '../modele/produitModele.php';
-//require_once 'modele/produitModele.php';
-
-$productToConsult = filter_input(INPUT_GET,'idProduct');
-if(!empty($productToConsult)|| !(is_null($productToConsult))){
-    getProductToJSON($productToConsult);
-}
-
-function getProductToJSON($id){
-    echo $id;
-}
-
+require_once 'modele/produitModele.php';
 function ajouter($param) {
     $action=$param['action'];
     require_once 'vue/produitVueAjouter.php';

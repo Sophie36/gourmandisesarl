@@ -5,10 +5,10 @@
 
 function initialiseProductFiche(idProduct){
     $.ajax({
-        type:"GET",
-        url:'controleur/produitControleur.php',
+        type:"POST",
+        url:'modele/produitModele.php',
         dataType:"json",
-        data:{idProduct : idProduct},
+        data:{reference : idProduct},
         success: function(response) {
             console.log(response);
             //afficheProductFiche(response);
@@ -18,6 +18,7 @@ function initialiseProductFiche(idProduct){
         }
     });
 }
+
 
 initialiseProductFiche(1016);
 
